@@ -1,59 +1,33 @@
 ---
 title: "Worklog Tuần 4"
 date: 2024-01-01
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần 4
 
-### Mục tiêu tuần 4:
+* Thực hành bảo mật lưu trữ với Amazon S3.
+* Tìm hiểu cách giám sát hạ tầng và cấu hình cảnh báo với Amazon CloudWatch.
+* Nắm được vai trò của AWS CloudTrail trong kiểm toán hệ thống và theo dõi hoạt động.
+* Nghiên cứu các dịch vụ phát hiện mối đe dọa và compliance như GuardDuty và AWS Config.
+* Giả lập kịch bản Incident Response để tích hợp nhiều thành phần bảo mật AWS.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần này
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| Thứ 2 | - Làm lab **Storage Security with Amazon S3**.<br>- Tìm hiểu các thực hành bảo mật S3 cơ bản như kiểm soát truy cập và cấu hình lưu trữ an toàn. | 11/05/2026 | 11/05/2026 | AWS S3 security lab |
+| Thứ 3 | - Làm lab cấu hình CloudWatch.<br>- Thực hành giám sát hạ tầng và thiết lập cảnh báo. | 12/05/2026 | 12/05/2026 | AWS CloudWatch lab |
+| Thứ 4 | - Làm lab AWS CloudTrail phục vụ kiểm toán hệ thống.<br>- Tìm hiểu cách CloudTrail ghi nhận API activity và hỗ trợ yêu cầu audit. | 13/05/2026 | 13/05/2026 | AWS CloudTrail lab |
+| Thứ 5 | - Nghiên cứu Amazon GuardDuty cho threat detection.<br>- Tìm hiểu AWS Config cho compliance monitoring và theo dõi cấu hình tài nguyên. | 14/05/2026 | 14/05/2026 | AWS GuardDuty / AWS Config documentation |
+| Thứ 6 | - Giả lập kịch bản Incident Response.<br>- Xem xét cách kết hợp các dịch vụ bảo mật AWS để hỗ trợ phát hiện, điều tra và phản hồi sự cố. | 15/05/2026 | 15/05/2026 | Tài liệu AWS Security |
 
+### Kết quả đạt được tuần 4
 
-### Kết quả đạt được tuần 4:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Thực hành bảo mật lưu trữ S3 và hiểu tầm quan trọng của kiểm soát truy cập đối với dữ liệu trên cloud.
+* Biết cách CloudWatch hỗ trợ giám sát metric hạ tầng và kích hoạt cảnh báo.
+* Hiểu cách CloudTrail hỗ trợ kiểm toán hệ thống thông qua việc ghi nhận AWS API activity.
+* Có kiến thức cơ bản về GuardDuty threat detection và AWS Config compliance monitoring.
+* Thực hành kết nối nhiều dịch vụ bảo mật AWS vào một workflow Incident Response.

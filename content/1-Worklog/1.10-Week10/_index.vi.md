@@ -1,59 +1,30 @@
 ---
 title: "Worklog Tuần 10"
 date: 2024-01-01
-weight: 2
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần 10
 
-### Mục tiêu tuần 10:
+* Tính toán chi phí dự án dựa trên kiến trúc hiện tại.
+* Vẽ lại kiến trúc dự án để phù hợp hơn với hướng triển khai.
+* Hoàn thiện sơ đồ kiến trúc đã cập nhật.
+* Tính lại chi phí ước tính sau khi thay đổi kiến trúc.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần này
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| Thứ 2 | - Tính cost ban đầu cho dự án.<br>- Rà soát các thành phần chi phí chính như compute, storage, database, networking và monitoring services. | 22/06/2026 | 22/06/2026 | AWS Pricing / ghi chú cost |
+| Thứ 3 | - Vẽ lại kiến trúc dự án theo phạm vi đã cập nhật.<br>- Điều chỉnh vị trí các component chính và kết nối giữa các service. | 23/06/2026 | 23/06/2026 | Ghi chú thiết kế kiến trúc |
+| Thứ 4 | - Tiếp tục chỉnh sửa sơ đồ kiến trúc dự án.<br>- Hoàn thành phiên bản kiến trúc mới để đưa vào tài liệu và review. | 24/06/2026 | 24/06/2026 | draw.io / kiến trúc dự án |
+| Thứ 5 | - Tính lại cost dự án theo kiến trúc mới.<br>- So sánh thay đổi chi phí sau khi điều chỉnh các service và thành phần triển khai. | 25/06/2026 | 25/06/2026 | AWS Pricing Calculator / ghi chú cost |
 
+### Kết quả đạt được tuần 10
 
-### Kết quả đạt được tuần 10:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Chuẩn bị được bản ước tính chi phí ban đầu cho dự án.
+* Vẽ lại và tinh chỉnh sơ đồ kiến trúc để phản ánh đúng hơn hướng triển khai.
+* Hoàn thành phiên bản kiến trúc cập nhật để sử dụng trong tài liệu và review với team.
+* Tính lại chi phí dự án dựa trên kiến trúc đã chỉnh sửa.

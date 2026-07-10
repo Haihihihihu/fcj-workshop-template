@@ -1,59 +1,31 @@
 ---
 title: "Worklog Tuần 9"
 date: 2024-01-01
-weight: 1
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần 9
 
-### Mục tiêu tuần 9:
+* Chạy lại các kịch bản lưu lượng mạng sạch để làm lại dataset cho máy học.
+* Cải thiện chất lượng và độ nhất quán của log lưu lượng sạch.
+* Chạy lại các kịch bản tấn công tầng mạng để phục vụ training dataset.
+* Kiểm tra log sinh ra và chuẩn bị dữ liệu cho các bước tiền xử lý, gắn nhãn sau đó.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần này
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| Thứ 2 | - Chạy lại các kịch bản lưu lượng mạng sạch.<br>- Thu thập log clean traffic để xây dựng lại dataset cho máy học. | 15/06/2026 | 15/06/2026 | Ghi chú sinh lưu lượng sạch |
+| Thứ 3 | - Tiếp tục chạy các luồng lưu lượng mạng sạch.<br>- Kiểm tra log sinh ra có ổn định và phù hợp để dùng cho dataset hay không. | 16/06/2026 | 16/06/2026 | Zeek logs / ghi chú dataset |
+| Thứ 4 | - Hoàn thành thêm các lượt chạy benign traffic.<br>- Sắp xếp output của lưu lượng sạch để chuẩn bị cho bước tiền xử lý. | 17/06/2026 | 17/06/2026 | Ghi chú chuẩn bị dataset |
+| Thứ 5 | - Chạy lại các kịch bản tấn công tầng mạng cho dataset máy học.<br>- Thu thập log attack traffic để so sánh với dữ liệu benign. | 18/06/2026 | 18/06/2026 | Ghi chú sinh attack traffic |
+| Thứ 6 | - Tiếp tục chạy các kịch bản tấn công tầng mạng.<br>- Rà soát log tấn công và chuẩn bị dữ liệu cho bước gắn nhãn, tiền xử lý. | 19/06/2026 | 19/06/2026 | Zeek attack logs / ghi chú labeling |
 
+### Kết quả đạt được tuần 9
 
-### Kết quả đạt được tuần 9:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Xây dựng lại được các mẫu lưu lượng sạch cho dataset máy học.
+* Cải thiện độ nhất quán của benign network logs thông qua nhiều lượt chạy traffic.
+* Tạo được các mẫu tấn công tầng mạng mới phục vụ training và evaluation.
+* Chuẩn bị dữ liệu benign và attack cho các bước tiền xử lý, gắn nhãn và trích xuất feature tiếp theo.

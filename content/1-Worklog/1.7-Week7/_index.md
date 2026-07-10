@@ -1,57 +1,33 @@
 ---
 title: "Week 7 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Week 7 Objectives
 
-### Week 7 Objectives:
+* Design a direct data pipeline from Zeek logs to the Python backend.
+* Finalize the RBAC model for project access control.
+* Build the `soc_shipper.py` source structure for real-time log shipping.
+* Implement parsers for Zeek `conn.log` and `http.log`.
+* Normalize Zeek timestamps into ISO 8601 UTC format for downstream AI processing.
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks to be carried out this week
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| Monday | - Designed the direct data pipeline from Zeek to the Python backend.<br>- Finalized the RBAC model for permission control. | 01/06/2026 | 01/06/2026 | Data pipeline / RBAC design notes |
+| Tuesday | - Initialized the source structure for `soc_shipper.py`.<br>- Researched and implemented a Python tail-file approach to track log file changes in real time. | 02/06/2026 | 02/06/2026 | Python file monitoring notes |
+| Wednesday | - Developed a parser module for JSON data from Zeek `conn.log`.<br>- Extracted key fields for AI1 and AI2A, including connection duration, connection state, bytes sent, and bytes received. | 03/06/2026 | 03/06/2026 | Zeek conn.log parser notes |
+| Thursday | - Extended the shipper to process application-layer `http.log` data in parallel.<br>- Extracted HTTP semantic fields for the AI2B web attack detection use case. | 04/06/2026 | 04/06/2026 | Zeek http.log parser notes |
+| Friday | - Built an output timestamp formatting filter.<br>- Implemented automatic conversion from Zeek epoch timestamps to ISO 8601 UTC strings. | 05/06/2026 | 05/06/2026 | Timestamp normalization notes |
 
+### Week 7 Achievements
 
-### Week 7 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Designed the Zeek-to-Python-backend data pipeline and clarified the RBAC direction.
+* Created the initial `soc_shipper.py` structure for real-time log collection.
+* Implemented tail-file based monitoring to follow changes in Zeek log files.
+* Built parsers for `conn.log` and `http.log` to extract features needed by AI modules.
+* Standardized output timestamps into ISO 8601 UTC format for cleaner downstream processing.

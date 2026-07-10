@@ -7,8 +7,8 @@
 <script type="text/javascript" src="{{"js/lunr.min.js" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
 <script type="text/javascript" src="{{"js/auto-complete.js" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
 <script type="text/javascript">
-    {{ if hugo.IsMultilingual }}
-        var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
+    {{ if gt (len .Site.Languages) 1 }}
+        var baseurl = "{{.Site.BaseURL}}{{ .Page.Lang }}/";
     {{ else }}
         var baseurl = "{{.Site.BaseURL}}";
     {{ end }}

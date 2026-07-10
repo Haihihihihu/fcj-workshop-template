@@ -1,59 +1,32 @@
 ---
 title: "Worklog Tuần 3"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần 3
 
-### Mục tiêu tuần 3:
+* Thực hành sử dụng IAM Roles với Amazon EC2.
+* Tìm hiểu cơ chế hoạt động của message queue và Amazon SQS.
+* Nắm được cách SQS và SNS hỗ trợ kiến trúc tách rời và event-driven.
+* Nghiên cứu khái niệm cơ sở dữ liệu đám mây và thực hành các thao tác cơ bản với Amazon RDS.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần này
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| Thứ 2 | - Làm lab **IAM Roles for EC2**.<br>- Tìm hiểu cách EC2 instance truy cập dịch vụ AWS thông qua IAM Role thay vì sử dụng long-term credentials. | 04/05/2026 | 04/05/2026 | AWS IAM / EC2 lab |
+| Thứ 3 | - Tìm hiểu cơ chế hoạt động của message queue.<br>- Học vai trò cơ bản của Amazon SQS trong giao tiếp bất đồng bộ và thiết kế hệ thống tách rời. | 05/05/2026 | 05/05/2026 | Amazon SQS documentation |
+| Thứ 4 | - Làm lab **Messaging Systems with SQS and SNS**.<br>- Thực hành sử dụng SQS và SNS cho giao tiếp dựa trên message. | 06/05/2026 | 06/05/2026 | AWS SQS và SNS lab |
+| Thứ 5 | - Nghiên cứu lý thuyết về cơ sở dữ liệu đám mây.<br>- Tìm hiểu các khái niệm database trên cloud, lợi ích của managed database và các use case phổ biến. | 07/05/2026 | 07/05/2026 | Tài liệu Cloud Database |
+| Thứ 6 | - Làm lab **Database Essentials with Amazon RDS**.<br>- Thực hành các khái niệm cơ bản về Amazon RDS và vận hành managed relational database. | 08/05/2026 | 08/05/2026 | AWS RDS lab |
 
+### Kết quả đạt được tuần 3
 
-### Kết quả đạt được tuần 3:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu cách IAM Roles giúp EC2 instance truy cập dịch vụ AWS an toàn mà không cần hard-code credentials.
+* Nắm được vai trò của message queue trong xử lý bất đồng bộ và tách rời các thành phần hệ thống.
+* Thực hành sử dụng Amazon SQS và SNS thông qua các bài lab messaging.
+* Xây dựng kiến thức nền tảng về cơ sở dữ liệu đám mây và managed relational database.
+* Thực hành các thao tác cơ bản với Amazon RDS thông qua lab Database Essentials.

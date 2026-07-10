@@ -1,57 +1,33 @@
 ---
 title: "Week 11 Worklog"
 date: 2024-01-01
-weight: 2
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Week 11 Objectives
 
-### Week 11 Objectives:
+* Build the AWS foundation for the project deployment.
+* Configure networking components such as VPC, Internet Gateway, route tables, and NAT Gateway.
+* Set up core pipeline services including SQS, S3, Secrets Manager, KMS, and IAM policies.
+* Deploy compute and access components such as EC2, IAM Roles, Security Groups, ALB, and CloudFront.
+* Refactor local lab integration and verify backend pipeline flow on EC2.
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks to be carried out this week
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| Monday | - Created the AWS foundation for the project.<br>- Started the network foundation design, including VPC, Internet Gateway, route tables, and NAT Gateway. | 29/06/2026 | 29/06/2026 | AWS networking notes |
+| Tuesday | - Configured SQS and S3 for the cloud pipeline.<br>- Created Secrets Manager, KMS, and IAM policies required by the backend and worker components. | 30/06/2026 | 30/06/2026 | AWS SQS / S3 / IAM notes |
+| Wednesday | - Deployed EC2 resources, IAM Roles, and Security Groups.<br>- Set up ALB and CloudFront components for the application architecture. | 01/07/2026 | 01/07/2026 | AWS compute and networking notes |
+| Thursday | - Refactored the Local Lab integration and `soc_shipper.py`.<br>- Checked the dashboard login flow after integration changes. | 02/07/2026 | 02/07/2026 | Local Lab / dashboard notes |
+| Friday | - Connected to the backend EC2 instance through SSH to verify the pipeline flow.<br>- Reviewed the backend `main` source code and identified missing S3 `putObject` and SQS `sendMessage` logic. | 03/07/2026 | 03/07/2026 | Backend EC2 / source review notes |
 
+### Week 11 Achievements
 
-### Week 11 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Prepared the initial AWS foundation and network foundation for the project.
+* Configured key pipeline services such as SQS, S3, Secrets Manager, KMS, and IAM policies.
+* Deployed core application infrastructure including EC2, IAM Roles, Security Groups, ALB, and CloudFront.
+* Refactored Local Lab integration and verified the dashboard login behavior.
+* Checked backend EC2 flow and identified missing implementation points for S3 upload and SQS message publishing.
